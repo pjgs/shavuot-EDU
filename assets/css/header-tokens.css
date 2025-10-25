@@ -1,0 +1,97 @@
+/* =============================================================================
+   SHAVUOT HEADER - DESIGN SYSTEM TOKENS
+   ============================================================================= */
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Colors */
+  --header-bg-primary: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  --header-bg-hover: rgba(255, 255, 255, 0.1);
+  --header-text-primary: #ffffff;
+  --header-text-hover: #e3f2fd;
+  --header-border: rgba(255, 255, 255, 0.2);
+  --header-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  --header-dropdown-bg: rgba(13, 71, 161, 0.95);
+  --header-backdrop: rgba(0, 0, 0, 0.5);
+
+  /* Typography */
+  --header-font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --header-font-size-sm: 0.875rem;    /* 14px */
+  --header-font-size-base: 1rem;     /* 16px */
+  --header-font-size-lg: 1.125rem;   /* 18px */
+  --header-font-weight-normal: 400;
+  --header-font-weight-medium: 500;
+  --header-font-weight-semibold: 600;
+  --header-letter-spacing: 0.05em;
+
+  /* Layout */
+  --header-height: 70px;
+  --header-height-sm: 60px;
+  --header-logo-height: 35px;
+  --header-logo-height-sm: 30px;
+  --header-container-max-width: 1200px;
+  --header-padding-x: 2rem;
+  --header-padding-y: 1rem;
+  --header-padding-x-sm: 1rem;
+  --header-padding-y-sm: 0.75rem;
+
+  /* Navigation */
+  --header-nav-gap: 2rem;
+  --header-nav-gap-sm: 1rem;
+  --header-nav-link-padding: 0.5rem 1rem;
+  --header-nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Mobile Menu */
+  --header-mobile-width: 300px;
+  --header-mobile-width-sm: 280px;
+  --header-mobile-transform: translateX(-100%);
+  --header-mobile-backdrop-filter: blur(8px);
+
+  /* Hamburger Menu */
+  --header-hamburger-size: 28px;
+  --header-hamburger-size-sm: 24px;
+  --header-hamburger-width: 3px;
+  --header-hamburger-color: var(--header-text-primary);
+  --header-hamburger-gap: 6px;
+
+  /* Transitions & Animations */
+  --header-transition-fast: 0.2s ease-out;
+  --header-transition-base: 0.3s ease-out;
+  --header-transition-slow: 0.4s ease-out;
+  --header-animation-slide: slideIn 0.3s ease-out;
+  --header-animation-fade: fadeIn 0.2s ease-out;
+
+  /* Z-index Scale */
+  --header-z-dropdown: 1001;
+  --header-z-mobile: 1002;
+  --header-z-backdrop: 999;
+
+  /* Breakpoints */
+  --header-breakpoint-md: 768px;
+  --header-breakpoint-lg: 1024px;
+  --header-breakpoint-xl: 1200px;
+
+  /* Focus & Accessibility */
+  --header-focus-width: 2px;
+  --header-focus-color: #90caf9;
+  --header-focus-offset: 2px;
+  --header-skip-link-padding: 0.5rem 1rem;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-bg-primary: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+    --header-dropdown-bg: rgba(13, 71, 161, 0.98);
+    --header-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --header-transition-fast: 0s;
+    --header-transition-base: 0s;
+    --header-transition-slow: 0s;
+  }
+}

@@ -1,0 +1,11 @@
+# Configuración para mostrar página 404 personalizada
+# Coloca este archivo en la raíz de tu sitio web
+
+# Para Apache (.htaccess)
+ErrorDocument 404 /404.html
+
+# Para Nginx (agrega esto a tu configuración de servidor)
+# error_page 404 /404.html;
+
+# Para otros servidores web, configura el manejo de errores 404
+# para que redirija a /404.html

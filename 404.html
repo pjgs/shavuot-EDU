@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Shavuot System</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicoin-shavuot-system.svg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .error-404-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00CED1 0%, #4169E1 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .error-404-title {
+            font-size: 120px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow:
+                -4px -4px 0 #1E3A8A,
+                4px -4px 0 #1E3A8A,
+                -4px 4px 0 #1E3A8A,
+                4px 4px 0 #1E3A8A,
+                -2px 0 0 #1E3A8A,
+                2px 0 0 #1E3A8A,
+                0 -2px 0 #1E3A8A,
+                0 2px 0 #1E3A8A,
+                0 0 20px rgba(30, 58, 138, 0.5);
+        }
+
+        .error-subtitle {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .error-message {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-button {
+            display: inline-block !important;
+            background: #ffffff !important;
+            color: #0092ce !important;
+            padding: 18px 35px !important;
+            font-size: 17px !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            border-radius: 50px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+            cursor: pointer !important;
+            border: 2px solid #0092ce !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+
+        .error-button:hover {
+            transform: scale(1.2) translateY(-4px) !important;
+            box-shadow: 0 12px 25px rgba(0, 146, 206, 0.4) !important;
+            background: #0092ce !important;
+            color: #ffffff !important;
+            border-color: #0077b3 !important;
+        }
+
+        .error-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 40px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        @media (max-width: 768px) {
+            .error-404-title {
+                font-size: 80px;
+            }
+
+            .error-subtitle {
+                font-size: 22px;
+            }
+
+            .error-message {
+                font-size: 16px;
+            }
+
+            .error-logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-404-title {
+                font-size: 60px;
+            }
+
+            .error-subtitle {
+                font-size: 18px;
+            }
+
+            .error-message {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 404 Error Section -->
+    <section class="error-404-section">
+        <div class="error-content">
+            <img src="assets/images/icon-kaf-shavuot-blanco.png" alt="Shavuot Logo" class="error-logo">
+
+            <h1 class="error-404-title">404</h1>
+            <h2 class="error-subtitle">Oops! Page Not Found</h2>
+            <p class="error-message">
+                We're sorry, the page you're looking for doesn't exist or has been moved.
+                It seems you've gotten lost in Shavuot's digital world.
+            </p>
+
+            <a href="index.html" class="error-button">
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Background particles effect -->
+    <div class="hero-background">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Footer se carga dinámicamente -->
+    <div id="footer-container"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/footer-loader.js"></script>
+</body>
+</html>
