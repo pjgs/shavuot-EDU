@@ -1,0 +1,91 @@
+/* ========================================
+   LEGAL PAGES — Minimalista
+   Privacy | Terms | Cookies
+   ======================================== */
+
+.legal-main {
+    min-height: 80vh;
+    padding: 80px 24px 100px;
+    background: #FAFAFA;
+}
+
+.legal-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+.legal-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: #1E3A8A;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+}
+
+/* Fecha */
+.legal-meta {
+    font-size: 0.82rem;
+    color: #9CA3AF;
+    margin-bottom: 48px;
+    letter-spacing: 0.3px;
+}
+
+/* Separador entre título y contenido */
+.legal-container h1+p {
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 32px;
+}
+
+/* Encabezados de sección */
+.legal-container h2 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 36px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Párrafos */
+.legal-container p {
+    font-size: 0.93rem;
+    line-height: 1.85;
+    color: #4B5563;
+    margin-bottom: 0;
+}
+
+/* Links inline */
+.legal-container a {
+    color: #2563EB;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.25);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.legal-container a:hover {
+    color: #00CED1;
+    border-bottom-color: #00CED1;
+}
+
+/* Strong */
+.legal-container strong {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-main {
+        padding: 60px 20px 80px;
+    }
+
+    .legal-meta {
+        margin-bottom: 32px;
+    }
+
+    .legal-container h2 {
+        margin-top: 28px;
+    }
+}

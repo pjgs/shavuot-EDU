@@ -1,11 +1,26 @@
-# Configuración para mostrar página 404 personalizada
-# Coloca este archivo en la raíz de tu sitio web
+# ============================================================
+# SHAVUOT-EDU - Apache Configuration for SiteGround
+# ============================================================
 
-# Para Apache (.htaccess)
+# Activar el motor de reescritura
+Options +FollowSymLinks
+RewriteEngine On
+
+# ── 1. Redirigir index.html → / (raíz limpia) ──────────────
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ── 2. Redirigir foo.html → foo (quitar extensión) ─────────
+# Si el archivo físico existe con .html, redirigir a URL limpia
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ── 3. Servir archivos .html desde URL sin extensión ────────
+# Si la URL no tiene extensión y existe el archivo .html, sirve ese archivo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# ── 4. Página 404 personalizada ─────────────────────────────
 ErrorDocument 404 /404.html
-
-# Para Nginx (agrega esto a tu configuración de servidor)
-# error_page 404 /404.html;
-
-# Para otros servidores web, configura el manejo de errores 404
-# para que redirija a /404.html
