@@ -7,6 +7,10 @@
 header('Content-Type: application/json');
 
 // 1. Configuración
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
 $to_email = "support@shavuot.com";
 $subject_prefix = "[Shavuot EDU Contact] ";
 
@@ -24,8 +28,8 @@ if (!empty($_POST["website_url_hp"])) {
 }
 
 // 4. Obtener y sanitizar datos
-$name    = filter_var(trim($_POST["name"] ?? ""), FILTER_SANITIZE_SPECIAL_CHARS);
-$email   = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
+$name = filter_var(trim($_POST["name"] ?? ""), FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
 $subject = filter_var(trim($_POST["subject"] ?? ""), FILTER_SANITIZE_SPECIAL_CHARS);
 $message = filter_var(trim($_POST["message"] ?? ""), FILTER_SANITIZE_SPECIAL_CHARS);
 
